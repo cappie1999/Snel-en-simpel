@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Spaghetti Bolognese 11</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+function updatePorties(selectEl) {
+    const multiplier = parseInt(selectEl.value) / 2;
+    document.querySelectorAll('[data-ingredient]').forEach(el => {
+        const base = parseFloat(el.getAttribute('data-ingredient'));
+        if (!isNaN(base)) {
+            el.textContent = Math.round(base * multiplier * 10) / 10;
+        }
+    });
+}
+</script>
+</head>
+<body>
+  <header><h1>Spaghetti Bolognese 11</h1></header>
+  <main class="detail">
+    <img src="../afbeeldingen_recepten_v2/recept-11.jpg" alt="Spaghetti Bolognese 11" class="recept-afbeelding"/>
+    <p><strong>Bereidingstijd:</strong> 25 minuten</p>
+    <label><strong>Porties:</strong>
+      <select onchange="updatePorties(this)">
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+    </label>
+    <h2>Ingrediënten</h2>
+    <ul><li><span data-ingredient="200">200</span> g Spaghetti</li><li><span data-ingredient="200">200</span> g Rundergehakt</li><li><span data-ingredient="1">1</span>  Ui</li><li><span data-ingredient="1">1</span>  Knoflook</li><li><span data-ingredient="400">400</span> g Tomatenblokjes (blik)</li><li><span data-ingredient="70">70</span> g Tomatenpuree</li><li><span data-ingredient="1">1</span>  Olijfolie</li><li><span data-ingredient="1">1</span>  Peper en zout</li></ul><h2>Bereiding</h2><ol><li>Kook de spaghetti volgens de verpakking.</li><li>Verhit olijfolie in een pan en fruit de ui en knoflook.</li><li>Voeg het gehakt toe en bak rul.</li><li>Voeg tomatenpuree toe en bak kort mee.</li><li>Voeg de tomatenblokjes toe en laat 10 minuten sudderen.</li><li>Breng op smaak met peper en zout.</li><li>Serveer de saus over de spaghetti.</li></ol>
+  </main>
+  <footer><p><a href="../index.html">Terug naar overzicht</a></p></footer>
+</body>
+</html>

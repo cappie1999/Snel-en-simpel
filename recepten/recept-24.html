@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegetarische curry 24</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+function updatePorties(selectEl) {
+    const multiplier = parseInt(selectEl.value) / 2;
+    document.querySelectorAll('[data-ingredient]').forEach(el => {
+        const base = parseFloat(el.getAttribute('data-ingredient'));
+        if (!isNaN(base)) {
+            el.textContent = Math.round(base * multiplier * 10) / 10;
+        }
+    });
+}
+</script>
+</head>
+<body>
+  <header><h1>Vegetarische curry 24</h1></header>
+  <main class="detail">
+    <img src="../afbeeldingen_recepten_v2/recept-24.jpg" alt="Vegetarische curry 24" class="recept-afbeelding"/>
+    <p><strong>Bereidingstijd:</strong> 30 minuten</p>
+    <label><strong>Porties:</strong>
+      <select onchange="updatePorties(this)">
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+    </label>
+    <h2>Ingrediënten</h2>
+    <ul><li><span data-ingredient="150">150</span> g Rijst</li><li><span data-ingredient="400">400</span> g Kikkererwten (blik)</li><li><span data-ingredient="400">400</span> g Kokosmelk</li><li><span data-ingredient="100">100</span> g Spinazie (vers)</li><li><span data-ingredient="2">2</span> g Kerriepoeder</li><li><span data-ingredient="1">1</span>  Ui</li><li><span data-ingredient="2">2</span> g Knoflook</li><li><span data-ingredient="1">1</span>  Olie</li><li><span data-ingredient="1">1</span>  Zout</li></ul><h2>Bereiding</h2><ol><li>Kook de rijst volgens de verpakking.</li><li>Verhit olie in een pan en fruit ui en knoflook.</li><li>Voeg kerriepoeder toe en bak kort.</li><li>Voeg kikkererwten en kokosmelk toe en laat 10 minuten pruttelen.</li><li>Voeg spinazie toe en laat slinken.</li><li>Breng op smaak met zout.</li><li>Serveer de curry met rijst.</li></ol>
+  </main>
+  <footer><p><a href="../index.html">Terug naar overzicht</a></p></footer>
+</body>
+</html>
