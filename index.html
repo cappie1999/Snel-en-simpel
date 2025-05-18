@@ -2,298 +2,310 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Snel & Simpel</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function zoekRecepten() {
+      const input = document.getElementById("zoekInput").value.toLowerCase();
+      const recepten = document.querySelectorAll(".recept");
+      recepten.forEach(r => {
+        const tekst = r.textContent.toLowerCase();
+        r.style.display = tekst.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Snel & Simpel</h1>
     <p>Vind snel een lekkere maaltijd met alledaagse ingrediënten</p>
   </header>
-
-  <section class="filters">
-    <button onclick="filterCategorie('alles')">Alles</button>
-    <button onclick="filterCategorie('pasta')">Pasta</button>
-    <button onclick="filterCategorie('vegetarisch')">Vegetarisch</button>
-    <button onclick="filterCategorie('vlees')">Vlees</button>
-    <button onclick="filterCategorie('curry')">Curry</button>
-    <button onclick="filterCategorie('soep')">Soep</button>
-    <button onclick="filterCategorie('rijst')">Rijst</button>
-    <button onclick="filterCategorie('snel')">Snel</button>
-</section>
-
   <section class="zoekbalk">
-    <input type="text" id="zoekInput" placeholder="Zoek op recept of ingrediënt..." onkeyup="zoekRecepten()">
+    <input type="text" id="zoekInput" placeholder="Zoek een recept..." onkeyup="zoekRecepten()">
   </section>
-
   <section class="recepten">
 
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-1.html">
         <h2>Spaghetti Bolognese</h2>
-        <p>Klik voor meer info</p>
+        <img src="afbeeldingen_recepten_v2/recept-1.jpg" alt="Spaghetti Bolognese" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="rijst">
+    <div class="recept">
       <a href="recepten/recept-2.html">
         <h2>Vegetarische curry</h2>
-        <p>Klik voor meer info</p>
+        <img src="afbeeldingen_recepten_v2/recept-2.jpg" alt="Vegetarische curry" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="pasta">
+    <div class="recept">
       <a href="recepten/recept-3.html">
-        <h2>Kip wraps</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 3</h2>
+        <img src="afbeeldingen_recepten_v2/recept-3.jpg" alt="Spaghetti Bolognese 3" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="soep">
+    <div class="recept">
       <a href="recepten/recept-4.html">
-        <h2>Tomatensoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 4</h2>
+        <img src="afbeeldingen_recepten_v2/recept-4.jpg" alt="Vegetarische curry 4" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="snel">
+    <div class="recept">
       <a href="recepten/recept-5.html">
-        <h2>Gebakken rijst</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 5</h2>
+        <img src="afbeeldingen_recepten_v2/recept-5.jpg" alt="Spaghetti Bolognese 5" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="rijst">
+    <div class="recept">
       <a href="recepten/recept-6.html">
-        <h2>Tosti ham-kaas</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 6</h2>
+        <img src="afbeeldingen_recepten_v2/recept-6.jpg" alt="Vegetarische curry 6" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-7.html">
-        <h2>Quinoa salade</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 7</h2>
+        <img src="afbeeldingen_recepten_v2/recept-7.jpg" alt="Spaghetti Bolognese 7" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="pasta">
+    <div class="recept">
       <a href="recepten/recept-8.html">
-        <h2>Nasi goreng</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 8</h2>
+        <img src="afbeeldingen_recepten_v2/recept-8.jpg" alt="Vegetarische curry 8" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="pasta">
+    <div class="recept">
       <a href="recepten/recept-9.html">
-        <h2>Pasta pesto</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 9</h2>
+        <img src="afbeeldingen_recepten_v2/recept-9.jpg" alt="Spaghetti Bolognese 9" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-10.html">
-        <h2>Boerenomelet</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 10</h2>
+        <img src="afbeeldingen_recepten_v2/recept-10.jpg" alt="Vegetarische curry 10" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="snel">
+    <div class="recept">
       <a href="recepten/recept-11.html">
-        <h2>Chili con carne</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 11</h2>
+        <img src="afbeeldingen_recepten_v2/recept-11.jpg" alt="Spaghetti Bolognese 11" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="rijst">
+    <div class="recept">
       <a href="recepten/recept-12.html">
-        <h2>Lasagne</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 12</h2>
+        <img src="afbeeldingen_recepten_v2/recept-12.jpg" alt="Vegetarische curry 12" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="snel">
+    <div class="recept">
       <a href="recepten/recept-13.html">
-        <h2>Pompoensoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 13</h2>
+        <img src="afbeeldingen_recepten_v2/recept-13.jpg" alt="Spaghetti Bolognese 13" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="rijst">
+    <div class="recept">
       <a href="recepten/recept-14.html">
-        <h2>Gevulde paprika</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 14</h2>
+        <img src="afbeeldingen_recepten_v2/recept-14.jpg" alt="Vegetarische curry 14" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-15.html">
-        <h2>Risotto met champignons</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 15</h2>
+        <img src="afbeeldingen_recepten_v2/recept-15.jpg" alt="Spaghetti Bolognese 15" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-16.html">
-        <h2>Tagliatelle zalm</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 16</h2>
+        <img src="afbeeldingen_recepten_v2/recept-16.jpg" alt="Vegetarische curry 16" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-17.html">
-        <h2>Kikkererwten stoof</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 17</h2>
+        <img src="afbeeldingen_recepten_v2/recept-17.jpg" alt="Spaghetti Bolognese 17" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-18.html">
-        <h2>Wokgroenten met tofu</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 18</h2>
+        <img src="afbeeldingen_recepten_v2/recept-18.jpg" alt="Vegetarische curry 18" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-19.html">
-        <h2>Bami met kip</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 19</h2>
+        <img src="afbeeldingen_recepten_v2/recept-19.jpg" alt="Spaghetti Bolognese 19" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-20.html">
-        <h2>Courgettesoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 20</h2>
+        <img src="afbeeldingen_recepten_v2/recept-20.jpg" alt="Vegetarische curry 20" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="rijst">
+    <div class="recept">
       <a href="recepten/recept-21.html">
-        <h2>Macaroni met ham</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 21</h2>
+        <img src="afbeeldingen_recepten_v2/recept-21.jpg" alt="Spaghetti Bolognese 21" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-22.html">
-        <h2>Broccoli ovenschotel</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 22</h2>
+        <img src="afbeeldingen_recepten_v2/recept-22.jpg" alt="Vegetarische curry 22" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-23.html">
-        <h2>Vegetarische wok</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 23</h2>
+        <img src="afbeeldingen_recepten_v2/recept-23.jpg" alt="Spaghetti Bolognese 23" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-24.html">
-        <h2>Preisoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 24</h2>
+        <img src="afbeeldingen_recepten_v2/recept-24.jpg" alt="Vegetarische curry 24" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-25.html">
-        <h2>Wraps met bonen</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 25</h2>
+        <img src="afbeeldingen_recepten_v2/recept-25.jpg" alt="Spaghetti Bolognese 25" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-26.html">
-        <h2>Aardappelgratin</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 26</h2>
+        <img src="afbeeldingen_recepten_v2/recept-26.jpg" alt="Vegetarische curry 26" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-27.html">
-        <h2>Rode linzensoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 27</h2>
+        <img src="afbeeldingen_recepten_v2/recept-27.jpg" alt="Spaghetti Bolognese 27" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-28.html">
-        <h2>Zuurkoolschotel</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 28</h2>
+        <img src="afbeeldingen_recepten_v2/recept-28.jpg" alt="Vegetarische curry 28" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-29.html">
-        <h2>Spinaziequiche</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 29</h2>
+        <img src="afbeeldingen_recepten_v2/recept-29.jpg" alt="Spaghetti Bolognese 29" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="snel">
+    <div class="recept">
       <a href="recepten/recept-30.html">
-        <h2>Pannenkoeken</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 30</h2>
+        <img src="afbeeldingen_recepten_v2/recept-30.jpg" alt="Vegetarische curry 30" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-31.html">
-        <h2>Rijst met doperwten</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 31</h2>
+        <img src="afbeeldingen_recepten_v2/recept-31.jpg" alt="Spaghetti Bolognese 31" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="soep">
+    <div class="recept">
       <a href="recepten/recept-32.html">
-        <h2>Broodje gezond</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 32</h2>
+        <img src="afbeeldingen_recepten_v2/recept-32.jpg" alt="Vegetarische curry 32" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-33.html">
-        <h2>Havermoutpap</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 33</h2>
+        <img src="afbeeldingen_recepten_v2/recept-33.jpg" alt="Spaghetti Bolognese 33" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="pasta">
+    <div class="recept">
       <a href="recepten/recept-34.html">
-        <h2>Salade met tonijn</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 34</h2>
+        <img src="afbeeldingen_recepten_v2/recept-34.jpg" alt="Vegetarische curry 34" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-35.html">
-        <h2>Gnocchi met tomatensaus</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 35</h2>
+        <img src="afbeeldingen_recepten_v2/recept-35.jpg" alt="Spaghetti Bolognese 35" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-36.html">
-        <h2>Hamburgers</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 36</h2>
+        <img src="afbeeldingen_recepten_v2/recept-36.jpg" alt="Vegetarische curry 36" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vlees">
+    <div class="recept">
       <a href="recepten/recept-37.html">
-        <h2>Erwtensoep</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 37</h2>
+        <img src="afbeeldingen_recepten_v2/recept-37.jpg" alt="Spaghetti Bolognese 37" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="curry">
+    <div class="recept">
       <a href="recepten/recept-38.html">
-        <h2>Noedels met groente</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 38</h2>
+        <img src="afbeeldingen_recepten_v2/recept-38.jpg" alt="Vegetarische curry 38" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
-    <div class="recept" data-categorie="vegetarisch">
+    <div class="recept">
       <a href="recepten/recept-39.html">
-        <h2>Couscous salade</h2>
-        <p>Klik voor meer info</p>
+        <h2>Spaghetti Bolognese 39</h2>
+        <img src="afbeeldingen_recepten_v2/recept-39.jpg" alt="Spaghetti Bolognese 39" style="width:100%;border-radius:6px;"/>
+        <p>25 minuten | Pasta</p>
       </a>
     </div>
-    <div class="recept" data-categorie="pasta">
+    <div class="recept">
       <a href="recepten/recept-40.html">
-        <h2>Kip kerrie</h2>
-        <p>Klik voor meer info</p>
+        <h2>Vegetarische curry 40</h2>
+        <img src="afbeeldingen_recepten_v2/recept-40.jpg" alt="Vegetarische curry 40" style="width:100%;border-radius:6px;"/>
+        <p>30 minuten | Vegetarisch</p>
       </a>
     </div>
   </section>
-  <footer>
-    <p>&copy; 2025 Snel & Simpel</p>
-  </footer>
-
-<script>
-function filterCategorie(categorie) {
-  const recepten = document.querySelectorAll('.recept');
-  recepten.forEach(r => {
-    const cat = r.getAttribute('data-categorie');
-    if (categorie === 'alles' || cat.includes(categorie)) {
-      r.style.display = 'block';
-    } else {
-      r.style.display = 'none';
-    }
-  });
-}
-function zoekRecepten() {
-  const input = document.getElementById("zoekInput").value.toLowerCase();
-  const recepten = document.querySelectorAll(".recept");
-  recepten.forEach(r => {
-    const tekst = r.textContent.toLowerCase();
-    r.style.display = tekst.includes(input) ? "block" : "none";
-  });
-}
-</script>
+  <footer><p>&copy; 2025 Snel & Simpel</p></footer>
 </body>
 </html>
